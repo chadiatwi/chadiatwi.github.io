@@ -1,248 +1,361 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Chadi Atwi — Branding & Web Design</title>
-  <meta name="description" content="Branding, Visual Identity & Landing Pages — Portfolio + Case Studies."/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chadi Atwi — Branding, Visual Identity & Landing Pages</title>
+  <meta name="description" content="Chadi Atwi — Branding, Visual Identity & Landing Pages. Portfolio + case studies. Clear process, fast delivery, professional assets." />
   <style>
     :root{
-      --bg:#0b0f19;
-      --card:#0f1629;
-      --text:#e8eefc;
-      --muted:#a9b4d0;
-      --line:rgba(255,255,255,.10);
-      --accent:#7c5cff;
-      --accent2:#53d3ff;
-      --shadow: 0 20px 60px rgba(0,0,0,.35);
-      --radius:18px;
-      --max: 1080px;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --bg0:#070A14;
+      --bg1:#0B1025;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --stroke: rgba(255,255,255,.10);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --muted2: rgba(255,255,255,.55);
+      --accent:#8B5CF6;
+      --accent2:#22D3EE;
+      --shadow: 0 20px 70px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 24px;
+      --max: 1100px;
+      --gap: 18px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
     }
+
     *{box-sizing:border-box}
+    html,body{height:100%}
     body{
       margin:0;
-      font-family:var(--sans);
-      background:
-        radial-gradient(900px 400px at 20% 0%, rgba(124,92,255,.25), transparent 60%),
-        radial-gradient(800px 500px at 80% 10%, rgba(83,211,255,.18), transparent 60%),
-        radial-gradient(700px 500px at 50% 90%, rgba(124,92,255,.18), transparent 55%),
-        var(--bg);
+      font-family:var(--font);
       color:var(--text);
-      line-height:1.55;
+      background:
+        radial-gradient(900px 500px at 12% 8%, rgba(139,92,246,.35), transparent 60%),
+        radial-gradient(900px 500px at 75% 30%, rgba(34,211,238,.20), transparent 55%),
+        radial-gradient(900px 700px at 80% 85%, rgba(139,92,246,.15), transparent 60%),
+        linear-gradient(180deg,var(--bg0),var(--bg1));
+      overflow-x:hidden;
     }
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:34px 18px 70px;}
+
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 60px}
     .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:14px; padding:10px 2px 0;
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:10px 12px;border:1px solid transparent;
     }
+    .pillrow{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border-radius:999px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+      color:var(--muted);
+      font-size:13px;
+      backdrop-filter: blur(10px);
+    }
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 14px rgba(34,211,238,.6)}
+    .lang{font-size:12px;color:var(--muted2)}
     .brand{
-      display:flex; align-items:center; gap:12px;
+      display:flex;align-items:center;gap:12px;
     }
     .avatar{
-      width:44px; height:44px; border-radius:14px;
-      background: linear-gradient(135deg, rgba(124,92,255,.9), rgba(83,211,255,.9));
-      display:grid; place-items:center;
-      box-shadow: var(--shadow);
-      border:1px solid rgba(255,255,255,.12);
-      font-weight:800;
-      letter-spacing:.5px;
+      width:42px;height:42px;border-radius:14px;
+      display:grid;place-items:center;
+      background: linear-gradient(135deg, rgba(139,92,246,.95), rgba(34,211,238,.65));
+      box-shadow: 0 10px 30px rgba(139,92,246,.25);
+      font-weight:700;
+      letter-spacing:.4px;
     }
-    .brand h1{
-      font-size:15px; margin:0;
-      letter-spacing:.2px;
-    }
-    .brand p{
-      margin:0; font-size:12px; color:var(--muted);
-    }
-    .pillrow{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
-    .pill{
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      padding:8px 12px;
-      border-radius:999px;
-      font-size:12px;
-      color:var(--muted);
-      backdrop-filter: blur(8px);
-    }
-    .pill strong{color:var(--text); font-weight:700}
+    .brand h1{font-size:16px;margin:0;line-height:1.1}
+    .brand p{margin:0;color:var(--muted);font-size:12.5px}
+
     .hero{
-      margin-top:26px;
-      padding:26px;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      margin-top:16px;
+      border-radius:var(--radius2);
+      background: linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.10);
       box-shadow: var(--shadow);
-      position:relative;
       overflow:hidden;
+      position:relative;
     }
-    .hero:before{
+    .hero::before{
       content:"";
-      position:absolute; inset:-2px;
-      background: radial-gradient(400px 200px at 20% 20%, rgba(124,92,255,.22), transparent 60%),
-                  radial-gradient(400px 220px at 80% 30%, rgba(83,211,255,.18), transparent 55%);
+      position:absolute;inset:-2px;
+      background:
+        radial-gradient(600px 200px at 20% 10%, rgba(34,211,238,.18), transparent 60%),
+        radial-gradient(600px 240px at 70% 30%, rgba(139,92,246,.20), transparent 60%);
       pointer-events:none;
-      opacity:.9;
+      filter: blur(0px);
     }
-    .hero > *{position:relative}
+    .hero-in{
+      position:relative;
+      padding:26px 22px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:start;
+    }
+
     .kicker{
-      display:inline-flex; align-items:center; gap:10px;
-      font-size:12px; color:var(--muted);
-      border:1px solid var(--line);
-      background: rgba(0,0,0,.12);
-      padding:8px 12px;
-      border-radius:999px;
+      display:inline-flex;align-items:center;gap:10px;
+      padding:8px 12px;border-radius:999px;
+      background:rgba(0,0,0,.18);
+      border:1px solid rgba(255,255,255,.10);
+      color:var(--muted);
+      font-size:13px;
+      width:max-content;
     }
-    .dot{
-      width:8px; height:8px; border-radius:99px;
-      background: var(--accent2);
-      box-shadow: 0 0 0 4px rgba(83,211,255,.12);
+    .kicker .dot{width:7px;height:7px}
+
+    .headline{
+      margin:14px 0 10px;
+      font-size:46px;
+      line-height:1.05;
+      letter-spacing:-.8px;
     }
-    .hero h2{
-      margin:14px 0 8px;
-      font-size:34px;
-      line-height:1.15;
-      letter-spacing:-.6px;
-    }
-    .hero h2 span{
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    .headline .hl{
+      background: linear-gradient(90deg, var(--accent), rgba(139,92,246,.55), var(--accent2));
       -webkit-background-clip:text;
       background-clip:text;
       color:transparent;
     }
-    .hero p{
-      margin:0;
+    .sub{
+      margin:0 0 14px;
       color:var(--muted);
-      max-width:70ch;
       font-size:15px;
+      line-height:1.7;
+      max-width:58ch;
     }
+    .trustline{
+      margin:0 0 18px;
+      color:var(--muted2);
+      font-size:13px;
+      display:flex;gap:10px;flex-wrap:wrap;
+    }
+    .trustline span{
+      padding:7px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+    }
+
     .cta{
-      margin-top:18px;
-      display:flex; gap:12px; flex-wrap:wrap;
-      align-items:center;
+      display:flex;gap:12px;flex-wrap:wrap;
+      margin-top:8px;
     }
     .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
       padding:12px 14px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.06);
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.06);
       color:var(--text);
-      font-size:13px;
-      font-weight:700;
-      transition: transform .12s ease, background .12s ease, border-color .12s ease;
-    }
-    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18);}
-    .btn.primary{
-      background: linear-gradient(90deg, rgba(124,92,255,.95), rgba(83,211,255,.9));
-      border: none;
-      color:#071023;
-    }
-    .btn.primary:hover{filter:brightness(1.02)}
-    .btn small{font-weight:600; opacity:.85}
-    .grid{
-      margin-top:22px;
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:14px;
-    }
-    .card{
-      grid-column: span 6;
-      padding:18px;
-      border-radius:var(--radius);
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      box-shadow: 0 14px 40px rgba(0,0,0,.22);
-    }
-    .card h3{
-      margin:0 0 10px;
       font-size:14px;
-      letter-spacing:.2px;
+      font-weight:600;
+      min-width:130px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.18);
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
     }
-    .list{margin:0; padding-left:18px; color:var(--muted); font-size:13px;}
-    .list li{margin:7px 0}
-    .services{
-      grid-column: span 12;
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:14px;
+    .btn:hover{transform: translateY(-1px);background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(139,92,246,.95), rgba(34,211,238,.55));
+      border-color: rgba(255,255,255,.10);
     }
-    .service{
-      grid-column: span 4;
+    .btn.primary:hover{background: linear-gradient(135deg, rgba(139,92,246,1), rgba(34,211,238,.65))}
+    .btn.ghost{
+      background:rgba(0,0,0,.18);
+    }
+    .btn.small{
+      padding:10px 12px;min-width:auto;font-size:13px;border-radius:12px;
+    }
+
+    .miniLinks{
+      margin-top:14px;
+      display:flex;flex-wrap:wrap;gap:10px;
+      color:var(--muted2);
+      font-size:13px;
+    }
+    .miniLinks a{
+      padding:8px 10px;border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+    }
+
+    .sidecard{
       padding:16px;
       border-radius:var(--radius);
-      border:1px solid var(--line);
-      background: rgba(15,22,41,.72);
-      box-shadow: 0 12px 36px rgba(0,0,0,.22);
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.18);
+      backdrop-filter: blur(12px);
     }
-    .badge{
-      display:inline-flex; align-items:center; gap:8px;
-      font-family:var(--mono);
-      font-size:11px;
-      color:rgba(255,255,255,.85);
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
-      margin-bottom:10px;
+    .sidecard h3{margin:0 0 8px;font-size:14px;color:var(--text)}
+    .sidecard p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+    .list{
+      margin:12px 0 0;padding:0;list-style:none;display:grid;gap:10px
     }
-    .service h4{margin:0 0 8px; font-size:14px}
-    .service p{margin:0; color:var(--muted); font-size:13px}
-    .section{
-      margin-top:26px;
-      display:flex; align-items:end; justify-content:space-between; gap:14px; flex-wrap:wrap;
+    .list li{
+      display:flex;gap:10px;align-items:flex-start;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
     }
-    .section h3{margin:0; font-size:16px}
-    .section p{margin:0; color:var(--muted); font-size:13px}
-    .portfolio{
-      margin-top:12px;
+    .tick{
+      width:18px;height:18px;border-radius:6px;
+      background:rgba(34,211,238,.14);
+      border:1px solid rgba(34,211,238,.25);
+      display:grid;place-items:center;
+      flex:0 0 auto;
+      margin-top:1px;
+    }
+    .tick::before{content:"✓";font-size:12px;color:rgba(34,211,238,.95);font-weight:800}
+
+    .grid{
+      margin-top:18px;
       display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:14px;
+      grid-template-columns: 1fr 1fr;
+      gap:var(--gap);
     }
-    .work{
-      grid-column: span 6;
+    .card{
       border-radius:var(--radius);
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.05);
+      box-shadow: 0 18px 60px rgba(0,0,0,.22);
       overflow:hidden;
     }
-    .work .thumb{
-      height:150px;
+    .card .in{padding:18px}
+    .card h2{margin:0 0 10px;font-size:14px;color:var(--text)}
+    .card ul{margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7}
+    .card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+
+    .offers{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:var(--gap);
+    }
+    .offer{
+      border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.18);
+      backdrop-filter: blur(12px);
+      padding:16px;
+      min-height:160px;
+      position:relative;
+      overflow:hidden;
+    }
+    .offer::before{
+      content:"";
+      position:absolute;inset:-2px;
       background:
-        radial-gradient(220px 140px at 20% 30%, rgba(124,92,255,.35), transparent 60%),
-        radial-gradient(220px 140px at 80% 20%, rgba(83,211,255,.25), transparent 60%),
-        linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border-bottom:1px solid var(--line);
+        radial-gradient(260px 140px at 15% 10%, rgba(139,92,246,.18), transparent 60%),
+        radial-gradient(280px 160px at 85% 30%, rgba(34,211,238,.12), transparent 60%);
+      pointer-events:none;
     }
-    .work .body{padding:14px 14px 16px}
-    .work h4{margin:0 0 6px; font-size:14px}
-    .meta{display:flex; gap:10px; flex-wrap:wrap; color:var(--muted); font-size:12px}
-    .tag{
-      font-family:var(--mono);
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.14);
-      padding:4px 8px;
+    .offer .tag{
+      position:relative;
+      display:inline-flex;
+      font-size:12px;
+      color:rgba(255,255,255,.75);
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+      padding:6px 10px;
       border-radius:999px;
+      margin-bottom:10px;
     }
-    .footer{
-      margin-top:26px;
-      border-top:1px solid var(--line);
-      padding-top:18px;
-      display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
-      color:var(--muted);
+    .offer h3{position:relative;margin:0 0 8px;font-size:15px}
+    .offer p{position:relative;margin:0 0 10px;color:var(--muted);font-size:13px;line-height:1.6}
+    .meta{
+      position:relative;
+      display:flex;gap:8px;flex-wrap:wrap;
+      margin-top:10px;
+      color:rgba(255,255,255,.72);
       font-size:12px;
     }
-    .links{display:flex; gap:12px; flex-wrap:wrap}
-    .links a{color:var(--muted); border-bottom:1px dashed rgba(255,255,255,.22)}
-    .links a:hover{color:var(--text)}
-    @media (max-width: 920px){
-      .card{grid-column: span 12}
-      .service{grid-column: span 12}
-      .work{grid-column: span 12}
-      .hero h2{font-size:28px}
+    .meta span{
+      padding:6px 9px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+    }
+
+    .sectionTitle{
+      margin-top:26px;
+      display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    }
+    .sectionTitle h4{margin:0;font-size:16px}
+    .sectionTitle p{margin:0;color:var(--muted);font-size:13px}
+    .tip{
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+      color:var(--muted2);
+      font-size:12px;
+      width:max-content;
+    }
+
+    .projects{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:var(--gap);
+    }
+    .proj{
+      border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.05);
+      overflow:hidden;
+    }
+    .thumb{
+      aspect-ratio: 16/9;
+      background:
+        radial-gradient(500px 240px at 30% 30%, rgba(139,92,246,.25), transparent 65%),
+        radial-gradient(500px 240px at 75% 55%, rgba(34,211,238,.18), transparent 65%),
+        linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border-bottom:1px solid rgba(255,255,255,.08);
+      display:flex;align-items:flex-end;justify-content:space-between;
+      padding:14px;
+    }
+    .thumb .badge{
+      font-size:12px;color:rgba(255,255,255,.8);
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.22);
+      padding:6px 10px;border-radius:999px;
+    }
+    .proj .in{padding:16px}
+    .proj h5{margin:0 0 8px;font-size:14px}
+    .proj .small{margin:0 0 10px;color:var(--muted);font-size:13px;line-height:1.6}
+    .proj ul{margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7}
+    .proj .links{
+      margin-top:12px;display:flex;gap:10px;flex-wrap:wrap
+    }
+
+    footer{
+      margin-top:28px;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.08);
+      color:var(--muted2);
+      font-size:12.5px;
+      display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    }
+    footer a{
+      color:rgba(255,255,255,.8);
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    @media (max-width: 980px){
+      .hero-in{grid-template-columns:1fr}
+      .headline{font-size:40px}
+      .offers{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .projects{grid-template-columns:1fr}
+      .pillrow{justify-content:flex-start}
+    }
+    @media (max-width: 520px){
+      .headline{font-size:34px}
+      .btn{width:100%}
+      .btn.small{width:auto}
+      .trustline{gap:8px}
     }
   </style>
 </head>
@@ -256,129 +369,257 @@
           <p>Branding • Visual Identity • Landing Pages</p>
         </div>
       </div>
+
       <div class="pillrow">
-        <div class="pill"><strong>Available</strong> for new projects</div>
-        <div class="pill">Lebanon (Remote)</div>
-        <div class="pill">EN • AR • FR</div>
+        <span class="pill"><span class="dot"></span> Available for new projects</span>
+        <span class="pill">Lebanon (Remote)</span>
+        <span class="pill"><span class="lang">EN • AR • FR</span></span>
       </div>
     </div>
 
     <section class="hero">
-      <div class="kicker"><span class="dot"></span> Portfolio website (GitHub Pages)</div>
-      <h2>I blend <span>creativity</span> with <span>technology</span> to build brands and conversion-ready pages.</h2>
-      <p>
-        I deliver clean brand identities, logos, guidelines, brochures/company profiles, social media creatives,
-        and WordPress/HTML landing pages — with a consistent, professional look.
-      </p>
-      <div class="cta">
-        <a class="btn primary" href="mailto:YOUR_EMAIL_HERE">Email me</a>
-        <a class="btn" href="https://www.upwork.com/" target="_blank" rel="noopener">Upwork <small>(profile)</small></a>
-        <a class="btn" href="https://www.freelancer.com/" target="_blank" rel="noopener">Freelancer <small>(profile)</small></a>
-        <a class="btn" href="#portfolio">View portfolio</a>
+      <div class="hero-in">
+        <div>
+          <div class="kicker"><span class="dot"></span> Portfolio website (GitHub Pages)</div>
+
+          <h2 class="headline">
+            I blend <span class="hl">creativity</span> with <span class="hl">technology</span> to build brands and conversion-ready pages.
+          </h2>
+
+          <p class="sub">
+            I deliver clean brand identities, logos, guidelines, brochures/company profiles, social media creatives,
+            and WordPress/HTML landing pages — with a consistent, professional look.
+          </p>
+
+          <div class="trustline">
+            <span>Fast delivery</span>
+            <span>One clear direction</span>
+            <span>Source files included</span>
+            <span>Clean exports (web/print)</span>
+          </div>
+
+          <!-- CTA (keep only 2 main CTAs) -->
+          <div class="cta">
+            <a class="btn primary" href="mailto:chadi@a1medianet.com?subject=Project%20Inquiry%20%E2%80%94%20Branding%20%2F%20Landing%20Page&body=Hi%20Chadi%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project.%20Here%20are%20the%20details%3A%0A%0A-%20Business%2FBrand%3A%0A-%20What%20you%20need%3A%0A-%20Deadline%3A%0A-%20Budget%20range%3A%0A%0AThanks%21">
+              Email me
+            </a>
+
+            <a class="btn ghost" href="https://wa.me/9613074053?text=Hi%20Chadi%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project.%20%F0%9F%91%8B">
+              WhatsApp
+            </a>
+
+            <a class="btn" href="#portfolio">
+              View portfolio
+            </a>
+          </div>
+
+          <!-- Small platform links (only if active) -->
+          <div class="miniLinks" aria-label="Active platforms">
+            <a href="#" target="_blank" rel="noopener">Upwork (profile)</a>
+            <a href="#" target="_blank" rel="noopener">Freelancer (profile)</a>
+            <a href="#" target="_blank" rel="noopener">Contra (profile)</a>
+            <!-- أضف Guru/PeoplePerHour فقط إذا صاروا جاهزين -->
+          </div>
+        </div>
+
+        <aside class="sidecard">
+          <h3>How I work</h3>
+          <p>Clear process, quick first draft, and clean delivery files — so you can launch confidently.</p>
+          <ul class="list">
+            <li><span class="tick"></span><span>One clear direction — no endless options</span></li>
+            <li><span class="tick"></span><span>Fast first draft → feedback → final delivery</span></li>
+            <li><span class="tick"></span><span>Organized assets + ready-to-use exports</span></li>
+            <li><span class="tick"></span><span>Simple, reliable communication</span></li>
+          </ul>
+        </aside>
       </div>
     </section>
 
     <div class="grid">
       <div class="card">
-        <h3>What I do</h3>
-        <ul class="list">
-          <li>Brand Identity Systems (logo, colors, typography, guidelines)</li>
-          <li>Landing Pages (WordPress / HTML) focused on clarity & conversion</li>
-          <li>Company Profiles, Brochures, Catalogues & Print Design</li>
-          <li>Social Media Packs (templates + post design + consistency)</li>
-        </ul>
+        <div class="in">
+          <h2>What I do</h2>
+          <ul>
+            <li>Brand Identity Systems (logo, colors, typography, guidelines)</li>
+            <li>Landing Pages (WordPress / HTML) focused on clarity & conversion</li>
+            <li>Company Profiles, Brochures, Catalogues & Print Design</li>
+            <li>Social Media Packs (templates + posts + consistency)</li>
+          </ul>
+        </div>
       </div>
+
       <div class="card">
-        <h3>How I work</h3>
-        <ul class="list">
-          <li>One clear direction — no endless options</li>
-          <li>Fast first draft → feedback → final delivery</li>
-          <li>Organized files, clean export, ready-to-use assets</li>
-          <li>Simple, reliable communication</li>
-        </ul>
+        <div class="in">
+          <h2>Best fit for</h2>
+          <p>
+            Businesses that want a clean professional identity and a landing page that communicates value quickly.
+            If you want “simple, structured, and ready to publish”, we’ll work great together.
+          </p>
+        </div>
       </div>
     </div>
 
-    <div class="services">
-      <div class="service">
-        <div class="badge">Offer 01</div>
-        <h4>Logo + Mini Brand Kit</h4>
-        <p>Logo, color palette, typography suggestions, and export pack (PNG/SVG/PDF).</p>
+    <div class="offers" id="offers">
+      <div class="offer">
+        <div class="tag">Offer 01</div>
+        <h3>Logo + Mini Brand Kit</h3>
+        <p>Logo, basic color palette, typography suggestions, and export pack (PNG/SVG/PDF).</p>
+        <div class="meta">
+          <span>from $79</span><span>2–3 days</span><span>Source files</span>
+        </div>
       </div>
-      <div class="service">
-        <div class="badge">Offer 02</div>
-        <h4>Brand Guidelines (PDF)</h4>
-        <p>Complete brand rules: Consistency for web/print/social with examples.</p>
+
+      <div class="offer">
+        <div class="tag">Offer 02</div>
+        <h3>Brand Guidelines (PDF)</h3>
+        <p>Complete brand rules: usage, spacing, colors, typography, and examples for web/print/social.</p>
+        <div class="meta">
+          <span>from $149</span><span>4–6 days</span><span>PDF + assets</span>
+        </div>
       </div>
-      <div class="service">
-        <div class="badge">Offer 03</div>
-        <h4>Landing Page (1 page)</h4>
-        <p>Conversion-ready structure + responsive layout (WordPress or HTML).</p>
+
+      <div class="offer">
+        <div class="tag">Offer 03</div>
+        <h3>Landing Page (1 page)</h3>
+        <p>Conversion-ready structure + responsive layout (WordPress or pure HTML). Clean sections + CTA.</p>
+        <div class="meta">
+          <span>from $199</span><span>3–5 days</span><span>Responsive</span>
+        </div>
       </div>
     </div>
 
-    <div class="section" id="portfolio">
+    <div class="sectionTitle" id="portfolio">
       <div>
-        <h3>Portfolio (add your real projects)</h3>
+        <h4>Portfolio (add your real projects)</h4>
         <p>Replace the placeholders below with your 5 best works first.</p>
       </div>
-      <div class="pill">Tip: Start with 5 strong projects فقط</div>
+      <div class="tip">Tip: Start with 5 strong projects فقط</div>
     </div>
 
-    <div class="portfolio">
-      <article class="work">
-        <div class="thumb"></div>
-        <div class="body">
-          <h4>Project 01 — Brand Identity</h4>
-          <div class="meta">
-            <span class="tag">Logo</span><span class="tag">Guidelines</span><span class="tag">Print</span>
+    <div class="projects">
+      <!-- Project 1 -->
+      <article class="proj">
+        <div class="thumb"><span class="badge">Brand Identity</span></div>
+        <div class="in">
+          <h5>Project Title 01 — Brand Identity</h5>
+          <p class="small"><strong>Goal:</strong> A clean identity to improve trust and consistency across web/print.</p>
+          <ul>
+            <li>Logo system + color palette</li>
+            <li>Typography + usage rules</li>
+            <li>Exports: PNG/SVG/PDF</li>
+          </ul>
+          <div class="links">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Case study</a>
+            <a class="btn small" href="#" target="_blank" rel="noopener">Preview</a>
           </div>
         </div>
       </article>
 
-      <article class="work">
-        <div class="thumb"></div>
-        <div class="body">
-          <h4>Project 02 — Company Profile / Brochure</h4>
-          <div class="meta">
-            <span class="tag">InDesign</span><span class="tag">Layout</span><span class="tag">PDF</span>
+      <!-- Project 2 -->
+      <article class="proj">
+        <div class="thumb"><span class="badge">Guidelines</span></div>
+        <div class="in">
+          <h5>Project Title 02 — Brand Guidelines</h5>
+          <p class="small"><strong>Goal:</strong> Provide a clear rulebook so the brand stays consistent.</p>
+          <ul>
+            <li>Logo usage, spacing, colors</li>
+            <li>Typography + layout examples</li>
+            <li>PDF ready for teams</li>
+          </ul>
+          <div class="links">
+            <a class="btn small" href="#" target="_blank" rel="noopener">PDF sample</a>
           </div>
         </div>
       </article>
 
-      <article class="work">
-        <div class="thumb"></div>
-        <div class="body">
-          <h4>Project 03 — Landing Page</h4>
-          <div class="meta">
-            <span class="tag">WordPress</span><span class="tag">HTML</span><span class="tag">Responsive</span>
+      <!-- Project 3 -->
+      <article class="proj">
+        <div class="thumb"><span class="badge">Company Profile</span></div>
+        <div class="in">
+          <h5>Project Title 03 — Company Profile</h5>
+          <p class="small"><strong>Goal:</strong> Professional profile to present services and win clients.</p>
+          <ul>
+            <li>Clean layout + hierarchy</li>
+            <li>Print-ready export</li>
+            <li>Editable source files</li>
+          </ul>
+          <div class="links">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Preview</a>
           </div>
         </div>
       </article>
 
-      <article class="work">
-        <div class="thumb"></div>
-        <div class="body">
-          <h4>Project 04 — Social Media Pack</h4>
-          <div class="meta">
-            <span class="tag">Templates</span><span class="tag">Reels Covers</span><span class="tag">Brand</span>
+      <!-- Project 4 -->
+      <article class="proj">
+        <div class="thumb"><span class="badge">Social Media Pack</span></div>
+        <div class="in">
+          <h5>Project Title 04 — Social Media Pack</h5>
+          <p class="small"><strong>Goal:</strong> Templates that keep posts consistent and fast to publish.</p>
+          <ul>
+            <li>Post templates (IG/FB)</li>
+            <li>Design system + icons</li>
+            <li>Ready-to-edit files</li>
+          </ul>
+          <div class="links">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Preview</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 5 -->
+      <article class="proj">
+        <div class="thumb"><span class="badge">Landing Page</span></div>
+        <div class="in">
+          <h5>Project Title 05 — Landing Page</h5>
+          <p class="small"><strong>Goal:</strong> A one-page site that explains the offer and increases inquiries.</p>
+          <ul>
+            <li>Conversion-ready sections</li>
+            <li>Responsive layout</li>
+            <li>Live demo link</li>
+          </ul>
+          <div class="links">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Live demo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 6 (optional) -->
+      <article class="proj">
+        <div class="thumb"><span class="badge">Catalogue / Print</span></div>
+        <div class="in">
+          <h5>Project Title 06 — Catalogue / Brochure</h5>
+          <p class="small"><strong>Goal:</strong> Present products/services with a premium print layout.</p>
+          <ul>
+            <li>Grid + typography system</li>
+            <li>Print-ready PDF</li>
+            <li>Editable InDesign files</li>
+          </ul>
+          <div class="links">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Preview</a>
           </div>
         </div>
       </article>
     </div>
 
-    <div class="footer">
-      <div>© <span id="y"></span> Chadi Atwi • Portfolio on GitHub Pages</div>
-      <div class="links">
-        <a href="mailto:chadiatwi@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/chadiatwi" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/chadiatwi" target="_blank" rel="noopener">GitHub</a>
+    <footer>
+      <div>
+        © <span id="y"></span> Chadi Atwi • Branding & Web Design
       </div>
-    </div>
+      <div>
+        Primary: <a href="mailto:chadi@a1medianet.com">chadi@a1medianet.com</a>
+        &nbsp; • &nbsp; Alternative: <a href="mailto:chadiatwi@gmail.com">chadiatwi@gmail.com</a>
+      </div>
+    </footer>
   </div>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // LINKS: ضع روابط المنصات المُفعَّلة فقط هنا (ثم عدّل miniLinks فوق)
+    // Example:
+    // const upwork = "https://www.upwork.com/freelancers/~YOURID";
+    // const freelancer = "https://www.freelancer.com/u/YOURUSERNAME";
+    // const contra = "https://contra.com/YOURNAME";
   </script>
 </body>
 </html>

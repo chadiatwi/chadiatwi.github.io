@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Chadi Atwi — Branding, Visual Identity & Landing Pages</title>
   <meta name="description" content="Chadi Atwi — Branding, Visual Identity & Landing Pages. Portfolio + case studies. Clear process, fast delivery, professional assets." />
+
   <style>
     :root{
       --bg0:#070A14;
       --bg1:#0B1025;
       --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.08);
       --stroke: rgba(255,255,255,.10);
       --text: rgba(255,255,255,.92);
       --muted: rgba(255,255,255,.68);
@@ -41,10 +41,12 @@
 
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 60px}
+
     .topbar{
       display:flex;align-items:center;justify-content:space-between;gap:12px;
-      padding:10px 12px;border:1px solid transparent;
+      padding:10px 12px;
     }
+
     .pillrow{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
     .pill{
       display:inline-flex;align-items:center;gap:8px;
@@ -57,31 +59,30 @@
     }
     .dot{width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 14px rgba(34,211,238,.6)}
     .lang{font-size:12px;color:var(--muted2)}
-    .brand{
-      display:flex;align-items:center;gap:12px;
-    }
+
+    .brand{display:flex;align-items:center;gap:12px}
+
+    /* ✅ FIX: Avatar image stays INSIDE the square (no overlay) */
     .avatar{
       width:42px;height:42px;border-radius:14px;
-      display:grid;place-items:center;
-      background: linear-gradient(135deg, rgba(139,92,246,.95), rgba(34,211,238,.65));
-      box-shadow: 0 10px 30px rgba(139,92,246,.25);
-      font-weight:700;
-      letter-spacing:.4px;
+      overflow:hidden;                 /* important */
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      background: rgba(255,255,255,.06);
+      display:block;
+      flex:0 0 auto;
     }
-    
-    .avatar{ overflow:hidden; }
     .avatar img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover;               /* important */
+      display:block;
     }
 
-    .brand { align-items:center; }
-    .brand h1{ font-size:17px; margin:0; line-height:1.15; }
-    .brand p{ margin:2px 0 0; }
+    .brand h1{font-size:16px;margin:0;line-height:1.1}
+    .brand p{margin:0;color:var(--muted);font-size:12.5px}
 
-     .hero{
+    .hero{
       margin-top:16px;
       border-radius:var(--radius2);
       background: linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
@@ -97,7 +98,6 @@
         radial-gradient(600px 200px at 20% 10%, rgba(34,211,238,.18), transparent 60%),
         radial-gradient(600px 240px at 70% 30%, rgba(139,92,246,.20), transparent 60%);
       pointer-events:none;
-      filter: blur(0px);
     }
     .hero-in{
       position:relative;
@@ -173,12 +173,8 @@
       border-color: rgba(255,255,255,.10);
     }
     .btn.primary:hover{background: linear-gradient(135deg, rgba(139,92,246,1), rgba(34,211,238,.65))}
-    .btn.ghost{
-      background:rgba(0,0,0,.18);
-    }
-    .btn.small{
-      padding:10px 12px;min-width:auto;font-size:13px;border-radius:12px;
-    }
+    .btn.ghost{background:rgba(0,0,0,.18)}
+    .btn.small{padding:10px 12px;min-width:auto;font-size:13px;border-radius:12px}
 
     .miniLinks{
       margin-top:14px;
@@ -201,15 +197,8 @@
     }
     .sidecard h3{margin:0 0 8px;font-size:14px;color:var(--text)}
     .sidecard p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
-    .list{
-      margin:12px 0 0;padding:0;list-style:none;display:grid;gap:10px
-    }
-    .list li{
-      display:flex;gap:10px;align-items:flex-start;
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.45;
-    }
+    .list{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+    .list li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:13px;line-height:1.45}
     .tick{
       width:18px;height:18px;border-radius:6px;
       background:rgba(34,211,238,.14);
@@ -335,9 +324,7 @@
     .proj h5{margin:0 0 8px;font-size:14px}
     .proj .small{margin:0 0 10px;color:var(--muted);font-size:13px;line-height:1.6}
     .proj ul{margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7}
-    .proj .links{
-      margin-top:12px;display:flex;gap:10px;flex-wrap:wrap
-    }
+    .proj .links{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
 
     footer{
       margin-top:28px;
@@ -369,11 +356,16 @@
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <div class="topbar">
       <div class="brand">
-        <div class="avatar"><img src="assets/chadi.jpg" alt="Chadi Atwi" /></div>
+        <!-- ✅ Avatar uses your uploaded image (assets/chadi.jpg) -->
+        <span class="avatar" aria-label="Chadi portrait">
+          <img src="assets/chadi.jpg" alt="Chadi Atwi" />
+        </span>
+
         <div>
           <h1>Chadi Atwi</h1>
           <p>Branding • Visual Identity • Landing Pages</p>
@@ -408,7 +400,6 @@
             <span>Clean exports (web/print)</span>
           </div>
 
-          <!-- CTA (keep only 2 main CTAs) -->
           <div class="cta">
             <a class="btn primary" href="mailto:chadi@a1medianet.com?subject=Project%20Inquiry%20%E2%80%94%20Branding%20%2F%20Landing%20Page&body=Hi%20Chadi%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project.%20Here%20are%20the%20details%3A%0A%0A-%20Business%2FBrand%3A%0A-%20What%20you%20need%3A%0A-%20Deadline%3A%0A-%20Budget%20range%3A%0A%0AThanks%21">
               Email me
@@ -418,18 +409,11 @@
               WhatsApp
             </a>
 
-            <a class="btn" href="#portfolio">
-              View portfolio
-            </a>
+            <a class="btn" href="#portfolio">View portfolio</a>
           </div>
 
-          <!-- Small platform links (only if active) -->
-          <div class="miniLinks" aria-label="Active platforms">
-            <a href="#" target="_blank" rel="noopener">Upwork (profile)</a>
-            <a href="#" target="_blank" rel="noopener">Freelancer (profile)</a>
-            <a href="#" target="_blank" rel="noopener">Contra (profile)</a>
-            <!-- أضف Guru/PeoplePerHour فقط إذا صاروا جاهزين -->
-          </div>
+          <!-- Platform links: auto-hide if URL is empty -->
+          <div class="miniLinks" id="platformLinks" aria-label="Active platforms"></div>
         </div>
 
         <aside class="sidecard">
@@ -507,7 +491,6 @@
     </div>
 
     <div class="projects">
-      <!-- Project 1 -->
       <article class="proj">
         <div class="thumb"><span class="badge">Brand Identity</span></div>
         <div class="in">
@@ -525,7 +508,6 @@
         </div>
       </article>
 
-      <!-- Project 2 -->
       <article class="proj">
         <div class="thumb"><span class="badge">Guidelines</span></div>
         <div class="in">
@@ -542,7 +524,6 @@
         </div>
       </article>
 
-      <!-- Project 3 -->
       <article class="proj">
         <div class="thumb"><span class="badge">Company Profile</span></div>
         <div class="in">
@@ -559,7 +540,6 @@
         </div>
       </article>
 
-      <!-- Project 4 -->
       <article class="proj">
         <div class="thumb"><span class="badge">Social Media Pack</span></div>
         <div class="in">
@@ -576,7 +556,6 @@
         </div>
       </article>
 
-      <!-- Project 5 -->
       <article class="proj">
         <div class="thumb"><span class="badge">Landing Page</span></div>
         <div class="in">
@@ -593,7 +572,6 @@
         </div>
       </article>
 
-      <!-- Project 6 (optional) -->
       <article class="proj">
         <div class="thumb"><span class="badge">Catalogue / Print</span></div>
         <div class="in">
@@ -612,9 +590,7 @@
     </div>
 
     <footer>
-      <div>
-        © <span id="y"></span> Chadi Atwi • Branding & Web Design
-      </div>
+      <div>© <span id="y"></span> Chadi Atwi • Branding & Web Design</div>
       <div>
         Primary: <a href="mailto:chadi@a1medianet.com">chadi@a1medianet.com</a>
         &nbsp; • &nbsp; Alternative: <a href="mailto:chadiatwi@gmail.com">chadiatwi@gmail.com</a>
@@ -625,11 +601,34 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    // LINKS: ضع روابط المنصات المُفعَّلة فقط هنا (ثم عدّل miniLinks فوق)
-    // Example:
-    // const upwork = "https://www.upwork.com/freelancers/~YOURID";
-    // const freelancer = "https://www.freelancer.com/u/YOURUSERNAME";
-    // const contra = "https://contra.com/YOURNAME";
+    // ✅ Put ONLY the activated profiles (leave empty = hidden)
+    const LINKS = {
+      upwork: "",       // e.g. "https://www.upwork.com/freelancers/~YOURID"
+      freelancer: "",   // e.g. "https://www.freelancer.com/u/YOURUSERNAME"
+      contra: "",       // e.g. "https://contra.com/YOURNAME"
+      guru: "",         // optional
+      peopleperhour: "" // optional
+    };
+
+    const labels = {
+      upwork: "Upwork (profile)",
+      freelancer: "Freelancer (profile)",
+      contra: "Contra (profile)",
+      guru: "Guru (profile)",
+      peopleperhour: "PeoplePerHour (profile)"
+    };
+
+    const container = document.getElementById("platformLinks");
+    Object.keys(LINKS).forEach(key => {
+      const url = (LINKS[key] || "").trim();
+      if (!url) return; // hide if not active
+      const a = document.createElement("a");
+      a.href = url;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = labels[key] || key;
+      container.appendChild(a);
+    });
   </script>
 </body>
 </html>
